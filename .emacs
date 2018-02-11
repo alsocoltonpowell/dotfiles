@@ -268,7 +268,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm helm-projectile iedit projectile smartparens swiper swiper-helm ace-window moe-theme doom-themes))))
+    (minimap company-c-headers company-emacs-eclim company-irony company-irony-c-headers counsel counsel-gtags counsel-projectile flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile irony popwin powerline projectile swiper swiper-helm smartparens moe-theme iedit helm-projectile doom-themes ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -384,19 +384,7 @@
 
 ;;; .emacs ends here
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (company-c-headers company-emacs-eclim company-irony company-irony-c-headers counsel counsel-gtags counsel-projectile flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile irony popwin powerline projectile swiper swiper-helm smartparens moe-theme iedit helm-projectile doom-themes ace-window))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+
 
 
