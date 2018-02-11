@@ -1,0 +1,78 @@
+!! emacs
+Emacs.font: Inconsolata-13:bold
+
+!! rofi
+rofi.color-enabled: true
+rofi.color-window: #282c34, #282c34, #51afef
+rofi.color-normal: #282c34, #f3f4f5, #282c34, #51afef, #eee8d5
+rofi.color-active: #505050, #f3f4f5, #505050, #63cbff, #e3fde3
+rofi.color-urgent: #505050, #e53935, #505050, #e53935, #fdf6e3
+
+!! mouse cursor
+Xcursor.size: 24
+
+!! urxvt (C-x C-; to uncomment emacs)
+URxvt.font:xft:Inconsolata:size=13:style=bold:antialias=true
+URxvt.scrollBar: false
+URxvt.saveLines: 20000
+
+!! remove xterm black border
+xterm*borderWidth: 0
+
+!! moe-theme color palette                       
+
+*font:xft:Inconsolata:style=bold:size=13:antialias=true
+
+!! Doom-one colors
+*background: #282C34
+*foreground: #BBC2CF
+
+!! moe-theme color palette
+!! *background: #303030
+!! *foreground: #c7c7c73
+
+!! Originally dark/light
+!! black 1/2
+*color0: #073642
+*color8: #303030
+
+!! red 1/2
+!! *color1: #ef2929
+!! *color9: #dd0000
+*color1: #FF6C6B
+*color9: #FF6C6B
+
+
+!! green 1/2
+!! *color2: #afff00
+!! *color10: #a1db00
+*color2: #98BE65
+*color10: #98BE65
+
+!! yellow 1/2
+*color3: #fce94f
+*color11: #ffd700
+
+!! blue 1/2
+!! *color4: #1f5bff
+*color4: #51afef
+!! *color12: #497aff
+*color12: #51afef
+
+!! #3d70ff
+!! !#1f5bff !#1a3054
+!! #51afef == titlebar color
+!! #7fcff7 == brighter titlebar color
+
+!! magenta 1/2
+*color5: #ff7bbb
+*color13: #ff4ea3
+
+!! cyan 1/2
+*color6: #87ffff
+*color14: #00d7af
+!!#87d7af
+
+!! white 1/2
+*color7: #c7c7c7
+*color15: #fdf6e3

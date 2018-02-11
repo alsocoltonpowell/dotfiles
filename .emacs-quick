@@ -1,0 +1,71 @@
+(require 'package)
+(package-initialize)
+
+;; ======================================================================
+;; Testing
+;; ======================================================================
+(add-to-list 'load-path "~/.emacs.d/elpa/c-tools")
+(require 'c-tools)
+
+;; ======================================================================
+;; General
+;; ======================================================================
+
+;; c-tools stuff
+(global-set-key (kbd "M-n") 'next-block-soe)
+(global-set-key (kbd "M-p") 'previous-block-soe)
+(global-set-key (kbd "M-DEL") 'backward-delete-word)
+(global-set-key (kbd "C-c s")
+		(lambda () (interactive) (insert "std::")))
+
+;; Highlight current line
+(global-hl-line-mode)
+
+;; Font
+(set-face-attribute 'default nil
+		    :family "Inconsolata"
+		    :height 130
+		    :weight 'bold)
+
+(set-face-attribute 'variable-pitch nil
+		    :family "Inconsolata"
+		    :height 130
+		    :weight 'bold)
+
+(global-linum-mode t) ;; line nums
+(global-set-key (kbd "C-j") 'newline-and-indent) ;; equal to RET
+(global-set-key (kbd "C-<f11>") 'compile) ;; C-f11 = compile
+(global-set-key (kbd "C-\'") 'company-complete) ;; auto-complete
+(global-set-key (kbd "C-;") 'iedit-mode) ;; toggle iedit
+
+;; replace suspend-frame with save-buffers-kill-terminal
+;; (originally C-x C-c)
+(global-set-key (kbd "C-x C-z") 'save-buffers-kill-terminal)
+(global-unset-key (kbd "C-x C-c"))
+
+(setq inhibit-splash-screen t) ;; disable the welcome screen
+
+(global-unset-key (kbd "C-z")) ;; disable minimize
+
+;; small compilation window
+(setq split-height-threshold 0)
+(setq compilation-window-height 10)
+
+;; powerline (init powerline-moe-theme after moe-theme init)
+(add-to-list 'load-path "~./emacs.d/elpa/powerline-20161121.2320/powerline.el")
+(require 'powerline)
+;; moe-theme
+(add-to-list 'custom-theme-load-path
+	     "~/.emacs.d/elpa/moe-theme-20170111.1838/moe-theme.el/")
+(add-to-list 'load-path
+	     "~/.emacs.d/elpa/moe-theme-20170111.1838/moe-dark-theme.el/")
+(require 'moe-theme)
+(moe-dark)
+;; moe powerline
+(powerline-moe-theme)
+
+;; parens
+(show-paren-mode 1)
+
+;; swiper
+(global-set-key (kbd "C-s") 'swiper)
