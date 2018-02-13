@@ -55,6 +55,7 @@
 (global-hl-line-mode) ;; highlight current line
 (setq select-enable-clipboard t) ;; good clipboard stoof
 (setq inhibit-splash-screen t) ;; disable the welcome screen
+(setq c-basic-offset 3) ;; C indentation size of 3
 
 ;; small compilation window
 (setq split-height-threshold 0)
@@ -78,8 +79,8 @@
 (global-unset-key (kbd "C-z")) ;; disable minimize
 (global-unset-key (kbd "C-r")) ;; disable reverse isearch (using swiper)
 
-;; My current emacs C source dir (Currently outdated)
-;; (setq source-directory "~/downloads/emacs-25.3/src/")
+;; My current emacs C source dir
+(setq source-directory "~/downloads/emacs-25.3/src/")
 
 ;; ===== Semantic (Global) =====
 (require 'cc-mode)

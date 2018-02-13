@@ -134,8 +134,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # default workspace screens
 # workspace $ws1 output "DVI-I-1"
-workspace $ws1 output "HDMI-1"
-workspace $ws2 output "DP-1"
+workspace $ws1 output "DP-1"
+workspace $ws4 output "HDMI-1"
+
 
 # assign [class="pavucontrol"] $ws10
 
@@ -209,12 +210,14 @@ set $doom-text-ww		#DBE2EF
 # slightly greyed
 set $doom-text-g		#9BA2AF
 set $doom-purple		#DCAEEA
+set $doom-red			#FF6C6B
 set $doom-dark			#1D2026
 
 set $unfoc-indic		#00365e
 set $bg-color			#505050
 set $inactive-bg-color		#303030
 set $text-color			#d3d4d5
+set $bright-text-color		#f3f4f5
 set $pure-white			#ffffff
 set $inactive-text-color	#c0c1c2
 set $urgent-bg-color		#e53935
@@ -227,10 +230,10 @@ set $urgent-bg-color		#e53935
 # client.urgent			$urgent-bg-color	$urgent-bg-color	$pure-white		$urgent-bg-color
 
 #				border			background		text			indicator
-client.focused			$arc-blue		$arc-blue		$text-color		$doom-purple
+client.focused			$arc-blue		$arc-blue		$bright-text-color	$doom-purple
 client.unfocused		$doom-dark		$doom-dark		$doom-text-g		$doom-purple
 client.focused_inactive		$doom-dark		$doom-dark		$doom-text-g		$doom-purple
-client.urgent			$doom-purple		$doom-purple		$text-color		$doom-purple
+client.urgent			$doom-red		$doom-dark		$bright-text-color	$doom-purple
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -259,7 +262,7 @@ bar {
 	       #				border			background			text
 	       focused_workspace		$arc-blue		$doom-back			$text-color
 	       inactive_workspace		$doom-dark		$doom-dark			$doom-text-g
-	       urgent_workspace			$doom-purple		$doom-purple			$text-color
+	       urgent_workspace			$doom-red		$doom-dark			$text-color
 	}
 }
 

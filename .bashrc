@@ -59,6 +59,7 @@ export LD_LIBRARY_PATH="/opt/cuda/lib64:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="/home/colton/downloads/cuda/lib64:$LD_LIBRARY_PATH"
 export CUDA_HOME=/opt/cuda
 export GTAGSLIBPATH=$HOME/.gtags/
+export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
 
 PS1='[\u@\h \W]\$ '
