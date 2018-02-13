@@ -24,13 +24,11 @@
 ;; Font
 (set-face-attribute 'default nil
 		    :family "Inconsolata"
-		    :height 130
-		    :weight 'bold)
+		    :height 130)
 
 (set-face-attribute 'variable-pitch nil
 		    :family "Inconsolata"
-		    :height 130
-		    :weight 'bold)
+		    :height 130)
 
 (global-linum-mode t) ;; line nums
 (global-set-key (kbd "C-j") 'newline-and-indent) ;; equal to RET
@@ -51,18 +49,11 @@
 (setq split-height-threshold 0)
 (setq compilation-window-height 10)
 
-;; powerline (init powerline-moe-theme after moe-theme init)
-(add-to-list 'load-path "~./emacs.d/elpa/powerline-20161121.2320/powerline.el")
-(require 'powerline)
-;; moe-theme
-(add-to-list 'custom-theme-load-path
-	     "~/.emacs.d/elpa/moe-theme-20170111.1838/moe-theme.el/")
-(add-to-list 'load-path
-	     "~/.emacs.d/elpa/moe-theme-20170111.1838/moe-dark-theme.el/")
-(require 'moe-theme)
-(moe-dark)
-;; moe powerline
-(powerline-moe-theme)
+;; Doom theme
+(require 'doom-themes)
+(setq doom-themes-enable-bold t
+      doom-themes-enable-italic t)
+(load-theme 'doom-one t)
 
 ;; parens
 (show-paren-mode 1)

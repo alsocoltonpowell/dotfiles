@@ -1,6 +1,3 @@
-!! emacs
-Emacs.font: Inconsolata-13
-
 !! rofi
 rofi.color-enabled: true
 rofi.color-window: #282c34, #282c34, #51afef
@@ -12,19 +9,25 @@ rofi.color-urgent: #505050, #e53935, #505050, #e53935, #fdf6e3
 Xcursor.size: 24
 
 !! urxvt (C-x C-; to uncomment emacs)
-URxvt.font:xft:Inconsolata:size=13:style=bold:antialias=true
+URxvt.font:xft:Inconsolata:size=13:antialias=true
+
+!! :style=bold
 URxvt.scrollBar: false
 URxvt.saveLines: 20000
 
 !! remove xterm black border
 xterm*borderWidth: 0
 
+!! emacs
+Emacs.font: Inconsolata-13
+
+
 !! moe-theme color palette                       
 
 !! *font:xft:Inconsolata:style=bold:size=13:antialias=true
-!! Xft.antialias: 1
-!! Xft.hinting:   1
-!! Xft.hintstyle: hintmedium
+Xft.antialias: 1
+Xft.hinting:   1
+Xft.hintstyle: hintmedium
 
 !! Doom-one colors
 *background: #282C34

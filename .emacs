@@ -16,7 +16,7 @@
   (interactive)
   (kill-new (buffer-file-name)))
 
-;; ======================================================================
+;; ======================================================================       
 ;; General
 ;; ======================================================================
 (require 'flycheck)
@@ -35,16 +35,14 @@
 ;; (load-theme 'doom-vibrant t)
 ;; ^ see page for other details
 
-;; ===== Font ======
+;; ;; ===== Font ======
 (set-face-attribute 'default nil
 		    :family "Inconsolata"
-		    :height 130
-		    :weight 'bold)
+		    :height 130)
 
 (set-face-attribute 'variable-pitch nil
 		    :family "Inconsolata"
-		    :height 130
-		    :weight 'bold)
+		    :height 130)
 
 
 ;; ===== Good Options =====
