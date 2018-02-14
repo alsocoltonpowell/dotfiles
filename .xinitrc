@@ -53,7 +53,7 @@ fi
 nitrogen --restore &
 
 #Nvidia-settings (disabled for now)
-#nvidia-settings -a [gpu:0]/GPUPowerMizerMode=1 &
+nvidia-settings -a [gpu:0]/GPUPowerMizerMode=1 &
 
 # Compton fade in
 compton -f &
@@ -62,7 +62,7 @@ compton -f &
 xscreensaver &
 
 # Adjust screen positions
-xrandr --output DP-1 --auto --output HDMI-1 --auto --right-of DP-1
+# xrandr --output DP-1 --auto --output HDMI-1 --auto --right-of DP-1
 
 #start i3
 exec i3
