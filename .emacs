@@ -35,7 +35,7 @@
 ;; (load-theme 'doom-vibrant t)
 ;; ^ see page for other details
 
-;; ;; ===== Font ======
+;; ===== Font ======
 (set-face-attribute 'default nil
 		    :family "Inconsolata"
 		    :height 130)
@@ -43,6 +43,21 @@
 (set-face-attribute 'variable-pitch nil
 		    :family "Inconsolata"
 		    :height 130)
+
+;; ===== Colors =====
+(set-face-attribute 'mode-line nil
+		    :background "#5294e2"
+		    :foreground "#f3f4f5"
+		    :distant-foreground "#e3e4e5")
+
+(set-face-attribute 'vertical-border nil
+		    :foreground "#5294e2")
+                    ;; :foreground "#1d2026")
+		    ;; :background "51afef")
+
+;; ===== Powerline =====
+(require 'powerline)
+(powerline-default-theme)
 
 
 ;; ===== Good Options =====

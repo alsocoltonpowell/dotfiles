@@ -134,8 +134,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # default workspace screens
 # workspace $ws1 output "DVI-I-1"
-workspace $ws1 output "DP-1"
-workspace $ws4 output "HDMI-1"
+workspace $ws1 output "DP-2"
+workspace $ws4 output "DP-0"
+workspace $ws7 output "HDMI-0"
 
 
 # assign [class="pavucontrol"] $ws10
