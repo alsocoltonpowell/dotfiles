@@ -35,30 +35,9 @@
 ;; (load-theme 'doom-vibrant t)
 ;; ^ see page for other details
 
-;; ===== Font ======
-(set-face-attribute 'default nil
-		    :family "Inconsolata"
-		    :height 130)
-
-(set-face-attribute 'variable-pitch nil
-		    :family "Inconsolata"
-		    :height 130)
-
-;; ===== Colors =====
-(set-face-attribute 'mode-line nil
-		    :background "#5294e2"
-		    :foreground "#f3f4f5"
-		    :distant-foreground "#e3e4e5")
-
-(set-face-attribute 'vertical-border nil
-		    :foreground "#5294e2")
-                    ;; :foreground "#1d2026")
-		    ;; :background "51afef")
-
 ;; ===== Powerline =====
 (require 'powerline)
 (powerline-default-theme)
-
 
 ;; ===== Good Options =====
 ;; (menu-bar-mode -1) ;; disable menu bar
@@ -86,6 +65,33 @@
 ;; replace suspend-frame with save-buffers-kill-terminal
 ;; (originally C-x C-c)
 (global-set-key (kbd "C-x C-z") 'save-buffers-kill-terminal)
+
+;; ===== Font ======
+(set-face-attribute 'default nil
+		    :family "Inconsolata"
+		    :height 130)
+
+(set-face-attribute 'variable-pitch nil
+		    :family "Inconsolata"
+		    :height 130)
+
+;; ===== Colors =====
+(set-face-attribute 'mode-line nil
+		    :background "#5294e2"
+		    :foreground "#f3f4f5"
+		    :distant-foreground "#e3e4e5")
+
+(set-face-attribute 'cursor nil
+		    :background "#5294e2")
+
+(set-face-attribute 'vertical-border nil
+		    :foreground "#5294e2")
+                    ;; :foreground "#1d2026")
+                    ;; :background "51afef")
+
+(set-face-attribute 'linum nil
+		    :background "#2f343f"
+		    :foreground "#6f7986")
 
 ;; ===== unbind keys =====
 (global-unset-key (kbd "C-x C-c"))
@@ -195,6 +201,10 @@
 ;; helm window in current buffer
 ;; (setq helm-split-window-in-side-p t)
 
+;; Helm colors
+(set-face-attribute 'helm-candidate-number nil
+		    :background "#dcaeea")
+
 ;; ======================================================================
 ;; C/C++
 ;; ======================================================================
@@ -288,7 +298,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(helm-candidate-number ((t (:background "#dcaeea" :foreground "black")))))
 
 ;; cpplint (currently disabled)
 ;; (defun flymake-google-init()
