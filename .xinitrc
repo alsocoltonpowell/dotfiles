@@ -64,5 +64,10 @@ xscreensaver &
 # Adjust screen positions
 # xrandr --output DP-1 --auto --output HDMI-1 --auto --right-of DP-1
 
+# kill pulseaudio to activate eq
+pulseaudio -k &
+# pactl load-module module-equalizer-sink
+# pactl load-module module-dbus-protocol
+
 #start i3
 exec i3
