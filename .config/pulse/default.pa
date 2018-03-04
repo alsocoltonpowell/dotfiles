@@ -144,4 +144,5 @@ load-module module-equalizer-sink
 load-module module-dbus-protocol
 
 # Set the default sink to equalizer (pactl)
-set-default-sink alsa_output.usb-Schiit_Audio_Schiit_Modi_Uber-00.analog-stereo.equalizer
+# set-default-sink alsa_output.usb-Schiit_Audio_Schiit_Modi_Uber-00.analog-stereo.equalizer
+# set-defautl-source alsa_output.usb-Schiit_Audio_Schiit_Modi_Uber-00.analog-stereo.equalizer.monitor

@@ -56,8 +56,10 @@ Xft.hintstyle: hintmedium
 *color10: #98BE65
 
 !! yellow 1/2
-*color3: #fce94f
-*color11: #ffd700
+!! *color3: #fce94f
+!! *color11: #ffd700
+*color3: #ecbe7b
+*color11: #ecbe7b
 
 !! blue 1/2
 !! *color4: #1f5bff
@@ -71,14 +73,20 @@ Xft.hintstyle: hintmedium
 !! #7fcff7 == brighter titlebar color
 
 !! magenta 1/2
-*color5: #ff7bbb
-*color13: #ff4ea3
+!! *color5: #ff7bbb
+!! *color13: #ff4ea3
+*color5: #c678dd
+*color13: #c678dd
 
 !! cyan 1/2
-*color6: #87ffff
-*color14: #00d7af
+!! *color6: #87ffff
+!! *color14: #00d7af
+*color6: #46d9ff
+*color14: #46d9ff
 !!#87d7af
 
 !! white 1/2
-*color7: #c7c7c7
-*color15: #fdf6e3
+!! *color7: #c7c7c7
+!! *color15: #fdf6e3
+*color7: #dfdfdf
+*color15: #dfdfdf

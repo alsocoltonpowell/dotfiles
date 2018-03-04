@@ -237,7 +237,9 @@
 	    (flycheck-select-checker 'c/c++-gcc)))
 
 (add-hook 'c-mode-hook
-	  (lambda () (interactive) (flycheck-select-checker 'c/c++-gcc)))
+	  (lambda () (interactive)
+	    (flycheck-select-checker 'c/c++-gcc)
+	    (c-set-offset 'substatement-open 0)))
 	    
 
 ;; ======================================================================
@@ -276,6 +278,10 @@
 ;; ======================================================================
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+(add-hook 'web-mode-hook
+	  (lambda ()
+	    (setq web-mode-markup-indent-offset 3)))
+
 
 ;; ======================================================================
 ;; General (For when everything is done loading)
@@ -292,7 +298,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (minimap company-c-headers company-emacs-eclim company-irony company-irony-c-headers counsel counsel-gtags counsel-projectile flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile irony popwin powerline projectile swiper swiper-helm smartparens moe-theme iedit helm-projectile doom-themes ace-window))))
+    (chess minimap company-c-headers company-emacs-eclim company-irony company-irony-c-headers counsel counsel-gtags counsel-projectile flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile irony popwin powerline projectile swiper swiper-helm smartparens moe-theme iedit helm-projectile doom-themes ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
