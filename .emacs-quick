@@ -1,0 +1,62 @@
+(require 'package)
+(package-initialize)
+
+;; ======================================================================
+;; Testing
+;; ======================================================================
+(add-to-list 'load-path "~/.emacs.d/elpa/c-tools")
+(require 'c-tools)
+
+;; ======================================================================
+;; General
+;; ======================================================================
+
+;; c-tools stuff
+(global-set-key (kbd "M-n") 'next-block-soe)
+(global-set-key (kbd "M-p") 'previous-block-soe)
+(global-set-key (kbd "M-DEL") 'backward-delete-word)
+(global-set-key (kbd "C-c s")
+		(lambda () (interactive) (insert "std::")))
+
+;; Highlight current line
+(global-hl-line-mode)
+
+;; Font
+(set-face-attribute 'default nil
+		    :family "Inconsolata"
+		    :height 130)
+
+(set-face-attribute 'variable-pitch nil
+		    :family "Inconsolata"
+		    :height 130)
+
+(global-linum-mode t) ;; line nums
+(global-set-key (kbd "C-j") 'newline-and-indent) ;; equal to RET
+(global-set-key (kbd "C-<f11>") 'compile) ;; C-f11 = compile
+(global-set-key (kbd "C-\'") 'company-complete) ;; auto-complete
+(global-set-key (kbd "C-;") 'iedit-mode) ;; toggle iedit
+
+;; replace suspend-frame with save-buffers-kill-terminal
+;; (originally C-x C-c)
+(global-set-key (kbd "C-x C-z") 'save-buffers-kill-terminal)
+(global-unset-key (kbd "C-x C-c"))
+
+(setq inhibit-splash-screen t) ;; disable the welcome screen
+
+(global-unset-key (kbd "C-z")) ;; disable minimize
+
+;; small compilation window
+(setq split-height-threshold 0)
+(setq compilation-window-height 10)
+
+;; Doom theme
+(require 'doom-themes)
+(setq doom-themes-enable-bold t
+      doom-themes-enable-italic t)
+(load-theme 'doom-one t)
+
+;; parens
+(show-paren-mode 1)
+
+;; swiper
+(global-set-key (kbd "C-s") 'swiper)
