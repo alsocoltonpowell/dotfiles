@@ -57,8 +57,8 @@ Xft.hintstyle: hintmedium
 *color10: #98BE65
 
 !! yellow 1/2
-*color3: #ecde7a
-*color11: #ecde7a
+*color3: #ecd979
+*color11: #ecd979
 
 !! blue 1/2
 !! *color4: #1f5bff

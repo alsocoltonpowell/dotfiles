@@ -27,7 +27,11 @@ alias myact='source ./venv/bin/activate'
 alias gtags='gtags --gtagslabel=ctags'
 
 function firefox() {
-    echo "Firefox is a terrible program that should not be executed from CLI."
+    echo "Firefox should not be executed from CLI."
+}
+
+function chromium() {
+    echo "Chromium should not be executed from CLI."
 }
 
 # # check that a man page exists
