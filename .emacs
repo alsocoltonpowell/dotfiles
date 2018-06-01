@@ -8,10 +8,10 @@
 ;; Enable stacktrace on elisp error:
 ;; (setq debug-on-error t)
 
-;; (defun flycheck-refresh()
-;;   (interactive)
-;;   (flycheck-mode)
-;;   (flycheck-mode))
+(defun flycheck-refresh()
+  (interactive)
+  (flycheck-mode)
+  (flycheck-mode))
 
 ;; ======================================================================
 ;; General
@@ -37,6 +37,10 @@
 ;; (load-theme 'doom-vibrant t)
 ;; ^ see page for other details
 
+;; ===== Atom One Dark Theme =====
+;; (require 'atom-one-dark-theme)
+;; (load-theme 'atom-one-dark t)
+
 ;; ===== Powerline =====
 (require 'powerline)
 (powerline-default-theme)
@@ -46,6 +50,7 @@
 (tool-bar-mode -1) ;; disable tool bar
 (scroll-bar-mode -1) ;; disable scroll bar
 (global-linum-mode t) ;; line nums
+;; (setq linum-format " %d")
 (global-hl-line-mode) ;; highlight current line
 (setq select-enable-clipboard t) ;; good clipboard stoof
 (setq inhibit-splash-screen t) ;; disable the welcome screen
@@ -84,12 +89,18 @@
 
 ;; ===== Font ======
 (set-face-attribute 'default nil
+		    ;; :family "DejaVu Sans Mono"
+		    ;; :height 110)
 		    :family "Inconsolata"
 		    :height 130)
 
+
 (set-face-attribute 'variable-pitch nil
+		    ;; :family "DejaVu Sans Mono"
+		    ;; :height 110)
 		    :family "Inconsolata"
 		    :height 130)
+		    
 
 ;; ===== Colors =====
 (set-face-attribute 'mode-line nil
@@ -365,7 +376,8 @@
  '(global-company-mode t)
  '(package-selected-packages
    (quote
-    (company-jedi irony-eldoc atom-one-dark-theme yasnippet-snippets chess minimap company-c-headers company-emacs-eclim company-irony company-irony-c-headers counsel counsel-gtags counsel-projectile flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile popwin powerline projectile swiper swiper-helm smartparens moe-theme iedit helm-projectile doom-themes ace-window))))
+    (dired-sidebar coffee-mode atom-one-dark-theme company-c-headers company-emacs-eclim company-irony company-irony-c-headers company-jedi counsel counsel-gtags counsel-projectile doom-themes flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile iedit irony irony-eldoc popwin powerline projectile smartparens swiper swiper-helm yasnippet-snippets ace-window chess company minimap)))
+ '(window-manage-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -383,6 +395,7 @@
  '(cursor ((t (:background "#5294e2"))))
  '(custom-button-mouse ((t (:background "#5294e2" :foreground "#282c34" :box (:line-width 1 :style none)))))
  '(custom-button-pressed ((t (:background "#5294e2" :foreground "#282c34" :box (:line-width 1 :style none)))))
+ '(dired-directory ((t (:foreground "#51afef" :weight bold))))
  '(eclim-problems-highlight-error-face ((t (:underline "#ff6c6b"))))
  '(eclim-problems-highlight-warning-face ((t (:underline "#ecd37a"))))
  '(helm-candidate-number ((t (:background "#dcaeea" :foreground "black"))))
@@ -485,17 +498,5 @@
 
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (atom-one-dark-theme company-c-headers company-emacs-eclim company-irony company-irony-c-headers company-jedi counsel counsel-gtags counsel-projectile doom-themes flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile iedit irony irony-eldoc popwin powerline projectile smartparens swiper swiper-helm yasnippet-snippets ace-window chess company minimap))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+

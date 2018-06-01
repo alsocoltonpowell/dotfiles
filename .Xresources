@@ -26,9 +26,11 @@ Emacs.font: Inconsolata-13
 !! moe-theme color palette                       
 
 !! *font:xft:Inconsolata:style=bold:size=13:antialias=true
-Xft.antialias: 1
-Xft.hinting:   1
-Xft.hintstyle: hintmedium
+!! Xft.antialias: 1
+!! Xft.hinting:   1
+!! Xft.hintstyle: hintmedium
+Xft.rgba:	  rgb
+Xft.lcdfilter: 	  lcddefault
 
 !! Doom-one colors
 *background: #282C34
@@ -46,9 +48,12 @@ Xft.hintstyle: hintmedium
 !! red 1/2
 !! *color1: #ef2929
 !! *color9: #dd0000
-*color1: #FF6C6B
-*color9: #FF6C6B
 
+!! *color1: #FF6C6B
+!! *color9: #FF6C6B
+
+*color1: #ff8988
+*color9: #ff8988
 
 !! green 1/2
 !! *color2: #afff00
@@ -57,8 +62,8 @@ Xft.hintstyle: hintmedium
 *color10: #98BE65
 
 !! yellow 1/2
-*color3: #ecd979
-*color11: #ecd979
+*color3: #ead979
+*color11: #ead979
 
 !! blue 1/2
 !! *color4: #1f5bff
@@ -72,12 +77,12 @@ Xft.hintstyle: hintmedium
 !! #7fcff7 == brighter titlebar color
 
 !! magenta 1/2
-*color5: #ff7bbb
-*color13: #ff4ea3
+*color5: #d193e3
+*color13: #d193e3
 
 !! cyan 1/2
-*color6: #87ffff
-*color14: #00d7af
+*color6: #46d9ff
+*color14: #46d9ff
 !!#87d7af
 
 !! white 1/2
