@@ -8,10 +8,20 @@
 ;; Enable stacktrace on elisp error:
 ;; (setq debug-on-error t)
 
+;; Flycheck can be really annoying sometimes
 (defun flycheck-refresh()
   (interactive)
+  (setq flycheck-disabled-checkers nil)
   (flycheck-mode)
   (flycheck-mode))
+
+(defun back-window()
+  (interactive)
+  (other-window -1))
+
+;; 06/06/18 - No other keybinds for this
+(global-set-key (kbd "C-c C-r") 'flycheck-refresh)
+(global-set-key (kbd "C-x p") 'back-window)
 
 ;; ======================================================================
 ;; General
@@ -281,10 +291,10 @@
   (flycheck-mode)
   ;; for c++ headers (Update regularly)
   (setq flycheck-clang-include-path
-	(list "usr/include/c++/7.3.1/" "/usr/include/X11"
+	(list "usr/include/c++/8.1.0/" "/usr/include/X11"
 	      "/usr/include/GL" "/usr/include/boost"))
   (setq flycheck-gcc-include-path
-	(list "usr/include/c++/7.3.1/" "/usr/include/X11"
+	(list "usr/include/c++/8.1.0/" "/usr/include/X11"
 	      "/usr/include/GL" "/usr/include/boost"))
   
   (flycheck-select-checker 'c/c++-gcc)
@@ -365,14 +375,14 @@
 (setq-default flycheck-emacs-lisp-load-path 'inherit)
 
 ;; Wait 30s before autocomplete
-(setq company-idle-delay 30)
+(setq company-idle-delay 3)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-idle-delay 30)
+ '(company-idle-delay 3)
  '(global-company-mode t)
  '(package-selected-packages
    (quote

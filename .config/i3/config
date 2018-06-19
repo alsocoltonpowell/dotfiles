@@ -41,9 +41,8 @@ bindsym $mod+Shift+q kill
 # start rofi
 bindsym $mod+d exec rofi -show run -lines 10 -eh 1 -width 100 -fullscreen -padding 400 -bw 2 -font "Noto Sans 18" -scrollbar-width 0 -separator-style "solid"
 
-bindsym $mod+c exec xdotool getactivewindow > $HOME/tests
-
-#$HOME/emacs-anywhere
+bindsym $mod+c exec /home/colton/projects/emacs-literally-anywhere/ela.sh
+# xdotool getactivewindow > $HOME/.active-window
 
 # There Also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -109,7 +108,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9: VLC"
+set $ws9 "9"
 set $ws10 "10: Volume"
 
 # switch to workspace

@@ -24,7 +24,7 @@ alias myvenv='python3 -m venv ./venv' #Creates a venv in local dir
 alias myact='source ./venv/bin/activate'
 
 # Note: gcc/g++ refers to current versions of GNU C/C++ compiler, while gcc-6/g++-6 refers to version 6.4.1 of the compilers (used for CUDA+Tensorflow)
-alias gtags='gtags --gtagslabel=ctags'
+alias gtags='gtags --gtagslabel=new-ctags'
 
 function firefox() {
     echo "Firefox should not be executed from CLI."
@@ -66,7 +66,7 @@ function chromium() {
 #     unset cmd
 # }
 
-export GTAGSLIBPATH=$HOME/.gtags/
+export GTAGSLIBPATH=$HOME/.gtags/:/usr/include/
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
 
