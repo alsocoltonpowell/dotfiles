@@ -258,7 +258,11 @@ set $moe-back		#303030
 # 	}
 # }
 
+# Not a "foo-bar" name; bar literally configs i3bar
 bar {
+	# Disable icons in i3 bar
+	tray_output none
+
         status_command i3status
 	font pango:Noto Sans 12
 	colors {
