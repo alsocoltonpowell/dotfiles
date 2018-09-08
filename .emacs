@@ -66,6 +66,7 @@
 (setq inhibit-splash-screen t) ;; disable the welcome screen
 (setq-default fill-column 80) ;; 80 character lines by default w/ auto-fill-mode
 (global-auto-revert-mode t) ;; Constant page refreshment and reversion
+(delete-selection-mode 1) ;; Delete highlighted text on action
 ;; small compilation window
 (setq split-height-threshold 0)
 (setq compilation-window-height 10)
@@ -291,10 +292,10 @@
   (flycheck-mode)
   ;; for c++ headers (Update regularly)
   (setq flycheck-clang-include-path
-	(list "usr/include/c++/8.1.0/" "/usr/include/X11"
+	(list "/usr/include/c++/8.1.0/" "/usr/include/X11"
 	      "/usr/include/GL" "/usr/include/boost"))
   (setq flycheck-gcc-include-path
-	(list "usr/include/c++/8.1.0/" "/usr/include/X11"
+	(list "/usr/include/c++/8.1.0/" "/usr/include/X11"
 	      "/usr/include/GL" "/usr/include/boost"))
   
   (flycheck-select-checker 'c/c++-gcc)

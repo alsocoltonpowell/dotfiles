@@ -284,3 +284,6 @@ exec xset -dpms
 # Kill pulseaudio to initialize a clean version on i3 startup
 exec pulseaudio -k
 exec pavucontrol
+
+# Hot corners
+# exec xdotool behave_screen_edge --delay 1000 bottom-right exec i3lock -u -c 000000
