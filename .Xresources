@@ -20,15 +20,15 @@ URxvt.cursorColor: #5294e2
 xterm*borderWidth: 0
 
 !! emacs
-Emacs.font: Inconsolata-13
+!! Emacs.font: Inconsolata-13
 
 
 !! moe-theme color palette                       
 
 !! *font:xft:Inconsolata:style=bold:size=13:antialias=true
-!! Xft.antialias: 1
-!! Xft.hinting:   1
-!! Xft.hintstyle: hintmedium
+Xft.antialias: 1
+Xft.hinting:   1
+Xft.hintstyle: hintfull
 Xft.rgba:	  rgb
 Xft.lcdfilter: 	  lcddefault
 

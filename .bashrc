@@ -18,10 +18,14 @@ alias mann='/usr/bin/man'
 alias astud='/home/colton/downloads/android-studio/bin/studio.sh' #android studio
 # eclimd alias; needs constant updating (find ~/.eclipse | grep eclimd)
 alias eclimd='~/.eclipse/org.eclipse.platform_4.7.3_155965261_linux_gtk_x86_64/eclimd'
+alias scussh='ssh cpowell@linux.dc.engr.scu.edu'
+alias pak='pulseaudio -k'
 
 #Python 
 alias myvenv='python3 -m venv ./venv' #Creates a venv in local dir
 alias myact='source ./venv/bin/activate'
+
+
 
 # Note: gcc/g++ refers to current versions of GNU C/C++ compiler, while gcc-6/g++-6 refers to version 6.4.1 of the compilers (used for CUDA+Tensorflow)
 alias gtags='gtags --gtagslabel=new-ctags'

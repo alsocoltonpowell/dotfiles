@@ -58,7 +58,7 @@ bindsym $mod+semicolon focus right
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Up focus up 
 bindsym $mod+Right focus right
 
 # move focused window
@@ -284,6 +284,7 @@ exec xset -dpms
 # Kill pulseaudio to initialize a clean version on i3 startup
 exec pulseaudio -k
 exec pavucontrol
+exec python /home/colton/projects/force-pulseaudio-equalizer/force-pulseaudio-equalizer.py
 
 # Hot corners
 # exec xdotool behave_screen_edge --delay 1000 bottom-right exec i3lock -u -c 000000

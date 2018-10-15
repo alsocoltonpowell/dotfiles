@@ -102,14 +102,18 @@
 (set-face-attribute 'default nil
 		    ;; :family "DejaVu Sans Mono"
 		    ;; :height 110)
+		    ;; :antialias "true"
 		    :family "Inconsolata"
+		    ;; :family "Inconsolata:antialias=true"
 		    :height 130)
 
 
 (set-face-attribute 'variable-pitch nil
 		    ;; :family "DejaVu Sans Mono"
 		    ;; :height 110)
+		    ;; :antialias "true"
 		    :family "Inconsolata"
+		    ;; :family "Inconsolata:antialias=true"
 		    :height 130)
 		    
 
@@ -190,8 +194,11 @@
   (define-key company-active-map (kbd "C-p") 'company-select-previous))
 
 ;; ===== Yasnippet (Global) =====
+;; (add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20180916.2115")
+;; (require 'yasnippet-snippets)
 (require 'yasnippet)
 (yas-global-mode 1)
+(setq yas-snippet-dirs '("~/.emacs.d/elpa/yasnippet-snippets-20180922.1928/snippets"))
 
 ;; ===== Smartparens (Global) =====
 (require 'smartparens-config)
@@ -292,10 +299,10 @@
   (flycheck-mode)
   ;; for c++ headers (Update regularly)
   (setq flycheck-clang-include-path
-	(list "/usr/include/c++/8.1.0/" "/usr/include/X11"
+	(list "/usr/include/c++/8.2.1/" "/usr/include/X11"
 	      "/usr/include/GL" "/usr/include/boost"))
   (setq flycheck-gcc-include-path
-	(list "/usr/include/c++/8.1.0/" "/usr/include/X11"
+	(list "/usr/include/c++/8.2.1/" "/usr/include/X11"
 	      "/usr/include/GL" "/usr/include/boost"))
   
   (flycheck-select-checker 'c/c++-gcc)
@@ -352,9 +359,16 @@
 ;; ======================================================================
 ;; python
 ;; ======================================================================
+(remove-hook 'elpy-modules 'elpy-module-flymake)
 
 ;; anaconda-mode + keys: https://github.com/proofit404/anaconda-mode
 (defun my-python-mode-hook()
+  (pyvenv-mode)
+  (pyvenv-activate "~/globalvenv")
+  (elpy-enable)
+  (elpy-mode)
+  (helm-gtags-mode)
+  ;; (setq elpy-modules (delete 'elpy-module-flymake elpy-modules))
   (flycheck-mode)
   (auto-fill-mode)
   (add-to-list 'company-backends 'company-jedi))
@@ -387,7 +401,7 @@
  '(global-company-mode t)
  '(package-selected-packages
    (quote
-    (dired-sidebar coffee-mode atom-one-dark-theme company-c-headers company-emacs-eclim company-irony company-irony-c-headers company-jedi counsel counsel-gtags counsel-projectile doom-themes flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile iedit irony irony-eldoc popwin powerline projectile smartparens swiper swiper-helm yasnippet-snippets ace-window chess company minimap)))
+    (moe-theme yasnippet-snippets web-mode smooth-scrolling elpy dired-sidebar coffee-mode atom-one-dark-theme company-c-headers company-emacs-eclim company-irony company-irony-c-headers company-jedi counsel counsel-gtags counsel-projectile doom-themes flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile iedit irony irony-eldoc popwin powerline projectile smartparens swiper swiper-helm ace-window chess company minimap)))
  '(window-manage-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
