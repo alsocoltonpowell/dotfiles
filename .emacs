@@ -64,7 +64,7 @@
 (global-hl-line-mode) ;; highlight current line
 (setq select-enable-clipboard t) ;; good clipboard stoof
 (setq inhibit-splash-screen t) ;; disable the welcome screen
-(setq-default fill-column 80) ;; 80 character lines by default w/ auto-fill-mode
+(setq-default fill-column 79) ;; 80 character lines by default w/ auto-fill-mode
 (global-auto-revert-mode t) ;; Constant page refreshment and reversion
 (delete-selection-mode 1) ;; Delete highlighted text on action
 ;; small compilation window
@@ -367,8 +367,9 @@
   (pyvenv-activate "~/globalvenv")
   (elpy-enable)
   (elpy-mode)
-  (helm-gtags-mode)
+  (flymake-mode-off)
   ;; (setq elpy-modules (delete 'elpy-module-flymake elpy-modules))
+  (helm-gtags-mode)
   (flycheck-mode)
   (auto-fill-mode)
   (add-to-list 'company-backends 'company-jedi))
