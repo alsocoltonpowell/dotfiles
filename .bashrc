@@ -22,7 +22,7 @@ alias scussh='ssh cpowell@linux.dc.engr.scu.edu'
 alias pak='pulseaudio -k'
 
 #Python 
-alias myvenv='python3 -m venv ./venv' #Creates a venv in local dir
+alias myvenv='python3 -m venv ./venv' #Creates a ven`v in local dir
 alias myact='source ./venv/bin/activate'
 
 

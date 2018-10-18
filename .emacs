@@ -23,6 +23,10 @@
 (global-set-key (kbd "C-c C-r") 'flycheck-refresh)
 (global-set-key (kbd "C-x p") 'back-window)
 
+;; For personal ruby gem programs
+(setenv "PATH" (concat (getenv "PATH") "/home/colton/.gem/ruby/2.5.0/bin:"))
+(setq exec-path (append exec-path '("/home/colton/.gem/ruby/2.5.0/bin")))
+
 ;; ======================================================================
 ;; General
 ;; ======================================================================
@@ -374,6 +378,13 @@
   (auto-fill-mode)
   (add-to-list 'company-backends 'company-jedi))
 (add-hook 'python-mode-hook 'my-python-mode-hook)
+
+;; ======================================================================
+;; SQL
+;; ======================================================================
+(defun my-sql-mode-hook()
+  (flycheck-mode))
+(add-hook 'sql-mode-hook 'my-sql-mode-hook)
 
 ;; ======================================================================
 ;; Webstuff
