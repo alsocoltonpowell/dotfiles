@@ -26,11 +26,13 @@ xterm*borderWidth: 0
 !! moe-theme color palette                       
 
 !! *font:xft:Inconsolata:style=bold:size=13:antialias=true
-Xft.antialias: 1
-Xft.hinting:   1
+Xft.antialias: true
+Xft.hinting:   true
 Xft.hintstyle: hintfull
 Xft.rgba:	  rgb
 Xft.lcdfilter: 	  lcddefault
+!! Xft.autohint: true
+!! Xft.dpi: 96
 
 !! Doom-one colors
 *background: #282C34

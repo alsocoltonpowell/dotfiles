@@ -367,10 +367,10 @@
 
 ;; anaconda-mode + keys: https://github.com/proofit404/anaconda-mode
 (defun my-python-mode-hook()
-  (pyvenv-mode)
-  (pyvenv-activate "~/globalvenv")
   (elpy-enable)
   (elpy-mode)
+  (pyvenv-mode)
+  (pyvenv-activate "~/globalvenv")
   (flymake-mode-off)
   ;; (setq elpy-modules (delete 'elpy-module-flymake elpy-modules))
   (helm-gtags-mode)
@@ -437,6 +437,12 @@
  '(eclim-problems-highlight-warning-face ((t (:underline "#ecd37a"))))
  '(helm-candidate-number ((t (:background "#dcaeea" :foreground "black"))))
  '(highlight ((t (:background "#5294e2" :foreground "#1B2229"))))
+ '(powerline-active0 ((t (:inherit mode-line :background "#5294e2" :foreground "#f3f4f5"))))
+ '(powerline-active1 ((t (:inherit mode-line :background "gray17" :foreground "#f3f4f5"))))
+ '(powerline-active2 ((t (:inherit mode-line :background "#585c64" :foreground "#f3f4f5"))))
+ '(powerline-inactive0 ((t (:inherit mode-line-inactive :background "#191c22" :foreground "#5b6268"))))
+ '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "#202329" :foreground "#5b6268"))))
+ '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "#383c44" :foreground "#5b6268"))))
  '(widget-field ((t (:background "#3f444f")))))
 
 
