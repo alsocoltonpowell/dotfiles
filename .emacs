@@ -442,7 +442,7 @@
  '(powerline-active2 ((t (:inherit mode-line :background "#585c64" :foreground "#f3f4f5"))))
  '(powerline-inactive0 ((t (:inherit mode-line-inactive :background "#191c22" :foreground "#5b6268"))))
  '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "#202329" :foreground "#5b6268"))))
- '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "#383c44" :foreground "#5b6268"))))
+ '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "#383c44" :foreground "#6b7278"))))
  '(widget-field ((t (:background "#3f444f")))))
 
 
