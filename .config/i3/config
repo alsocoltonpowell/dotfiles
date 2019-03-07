@@ -41,7 +41,10 @@ bindsym $mod+Shift+q kill
 # start rofi
 bindsym $mod+d exec rofi -show run -lines 10 -eh 1 -width 100 -fullscreen -padding 400 -bw 2 -font "Noto Sans 18" -scrollbar-width 0 -separator-style "solid"
 
-bindsym $mod+c exec /home/colton/projects/emacs-literally-anywhere/ela.sh
+# run emacs-literally-anywhere
+# Note: must reload i3 before making changes here or anywhere else in the doc
+bindsym $mod+c exec /home/colton/projects/emacs-literally-anywhere/ela
+
 # xdotool getactivewindow > $HOME/.active-window
 
 # There Also is the (new) i3-dmenu-desktop which only displays applications

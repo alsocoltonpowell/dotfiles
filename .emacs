@@ -5,6 +5,7 @@
 ;; Testing
 ;; ======================================================================
 
+
 ;; Enable stacktrace on elisp error:
 ;; (setq debug-on-error t)
 
@@ -37,9 +38,13 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 
-;; ===== C-tools =====
+;; ===== c-tools =====
 (add-to-list 'load-path "~/.emacs.d/elpa/c-tools")
 (require 'c-tools)
+
+;; ===== smooth-scrolling =====
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
 
 ;; ===== Doom themes =====
 (require 'doom-themes)
@@ -106,8 +111,8 @@
 (set-face-attribute 'default nil
 		    ;; :family "DejaVu Sans Mono"
 		    ;; :height 110)
-		    ;; :antialias "true"
 		    :family "Inconsolata"
+		    ;; :weight 'bold
 		    ;; :family "Inconsolata:antialias=true"
 		    :height 130)
 
@@ -115,8 +120,8 @@
 (set-face-attribute 'variable-pitch nil
 		    ;; :family "DejaVu Sans Mono"
 		    ;; :height 110)
-		    ;; :antialias "true"
 		    :family "Inconsolata"
+		    ;; :weight 'bold
 		    ;; :family "Inconsolata:antialias=true"
 		    :height 130)
 		    
@@ -235,6 +240,11 @@
 (global-set-key (kbd "M-y") 'helm-show-kill-ring) ;; better yank cycle
 (global-set-key (kbd "C-c r") 'helm-recentf)      ;; recently opened files
 (helm-mode 1)
+
+;; ggtags before helm-gtags
+;; ggtags used for auto-updating tags table, then helm-gtags used as interface
+(require 'ggtags)
+(ggtags-mode)
 
 ;; Tagging incremental completion
 (require 'helm-gtags)
@@ -403,7 +413,6 @@
 
 ;; Wait 30s before autocomplete
 (setq company-idle-delay 3)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -413,7 +422,8 @@
  '(global-company-mode t)
  '(package-selected-packages
    (quote
-    (moe-theme yasnippet-snippets web-mode smooth-scrolling elpy dired-sidebar coffee-mode atom-one-dark-theme company-c-headers company-emacs-eclim company-irony company-irony-c-headers company-jedi counsel counsel-gtags counsel-projectile doom-themes flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile iedit irony irony-eldoc popwin powerline projectile smartparens swiper swiper-helm ace-window chess company minimap)))
+    (ggtags moe-theme yasnippet-snippets web-mode smooth-scrolling elpy dired-sidebar coffee-mode atom-one-dark-theme company-c-headers company-emacs-eclim company-irony company-irony-c-headers company-jedi counsel counsel-gtags counsel-projectile doom-themes flx-ido flycheck flycheck-irony helm helm-gtags helm-projectile iedit irony irony-eldoc popwin powerline projectile smartparens swiper swiper-helm ace-window chess company minimap)))
+ '(sublimity-mode t)
  '(window-manage-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -440,10 +450,13 @@
  '(powerline-active0 ((t (:inherit mode-line :background "#5294e2" :foreground "#f3f4f5"))))
  '(powerline-active1 ((t (:inherit mode-line :background "gray17" :foreground "#f3f4f5"))))
  '(powerline-active2 ((t (:inherit mode-line :background "#585c64" :foreground "#f3f4f5"))))
- '(powerline-inactive0 ((t (:inherit mode-line-inactive :background "#191c22" :foreground "#5b6268"))))
- '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "#202329" :foreground "#5b6268"))))
+ '(powerline-inactive0 ((t (:inherit mode-line-inactive :background "#1d2026" :foreground "#5b6268"))))
+ '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "#25282e" :foreground "#5b6268"))))
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "#383c44" :foreground "#6b7278"))))
  '(widget-field ((t (:background "#3f444f")))))
+
+;; ===== Powerline (con't) =====
+(powerline-reset)
 
 
 
