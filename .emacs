@@ -5,7 +5,6 @@
 ;; Testing
 ;; ======================================================================
 
-
 ;; Enable stacktrace on elisp error:
 ;; (setq debug-on-error t)
 
@@ -15,10 +14,6 @@
   (setq flycheck-disabled-checkers nil)
   (flycheck-mode)
   (flycheck-mode))
-
-(defun back-window()
-  (interactive)
-  (other-window -1))
 
 ;; 06/06/18 - No other keybinds for this
 (global-set-key (kbd "C-c C-r") 'flycheck-refresh)
@@ -200,7 +195,12 @@
   (define-key company-active-map (kbd "M-n") nil)
   (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "C-n") 'company-select-next)
-  (define-key company-active-map (kbd "C-p") 'company-select-previous))
+  (define-key company-active-map (kbd "C-p") 'company-select-previous)
+  (setq company-idle-delay 0.1
+	company-minimum-prefix-length 2
+	company-show-numbers t
+	company-tooltip-limit 30
+	company-dabbrev-downcase nil))
 
 ;; ===== Yasnippet (Global) =====
 ;; (add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20180916.2115")
@@ -457,8 +457,6 @@
 
 ;; ===== Powerline (con't) =====
 (powerline-reset)
-
-
 
 ;; cpplint (currently disabled)
 ;; (defun flymake-google-init()
