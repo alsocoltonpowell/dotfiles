@@ -446,6 +446,11 @@
  '(eclim-problems-highlight-error-face ((t (:underline "#ff6c6b"))))
  '(eclim-problems-highlight-warning-face ((t (:underline "#ecd37a"))))
  '(helm-candidate-number ((t (:background "#dcaeea" :foreground "black"))))
+ '(helm-ff-directory ((t (:foreground "#51afef" :weight bold))))
+ '(helm-ff-symlink ((t (:foreground "#46d9ff" :weight bold))))
+ '(helm-ff-truename ((t (:foreground "#46d9ff" :weight bold)))) ;; link ptr
+ '(helm-ff-dotted-symlink-directory ((t (:foreground "#5b6268"))))
+ '(helm-ff-dotted-directory ((t (:foreground "#5b6268"))))
  '(highlight ((t (:background "#5294e2" :foreground "#1B2229"))))
  '(powerline-active0 ((t (:inherit mode-line :background "#5294e2" :foreground "#f3f4f5"))))
  '(powerline-active1 ((t (:inherit mode-line :background "gray17" :foreground "#f3f4f5"))))
